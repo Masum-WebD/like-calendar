@@ -25,24 +25,24 @@ const CalenderHeader = () => {
         <img src={logo} alt="calendar" className="mr-2 w-12 h-12" />
         <h1 className="mr-10 text-xl text-gray-500 fond-bold">Calendar</h1>
       </div>
-      <div className="flex">
+      <div className="flex  items-center">
         <button onClick={handleReset} className="border rounded px-4 py-2 mr-5">
           Today
         </button>
-        <h2 className="ml-2 text-2xl text-gray-600 font-bold">
+        <h2 className="ml-2 text-xl text-gray-500 font-bold">
           {dayjs(new Date(dayjs().year(), monthIndex)).format(" MMMM YYYY")}
         </h2>
         <button
           onClick={handlePrevMonth}
           className="material-icons-outline cursor-pointer text-gray-600 mx-2 font-bold h-10 text-center "
         >
-          <FiChevronLeft />
+          <FiChevronLeft className="h-8 w-7" />
         </button>
         <button
           onClick={handleNextMonth}
           className="material-icons-outline cursor-pointer text-gray-600 h-10 font-bold mx-2 text-center "
         >
-          <FiChevronRight />
+          <FiChevronRight className="h-8 w-7" />
         </button>
       </div>
     </header>
@@ -50,3 +50,5 @@ const CalenderHeader = () => {
 };
 
 export default CalenderHeader;
+
+

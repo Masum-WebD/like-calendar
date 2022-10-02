@@ -69,8 +69,6 @@ const EventModal = () => {
         </herder>
         <div className="p-3">
           <div className="grid grid-cols-1/5 items-end gap-y-7 ">
-            <div></div>
-
             <input
               type="text"
               name="title"
@@ -80,15 +78,15 @@ const EventModal = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
-            <div className="flex">
-              <span className="text-gray-400">
-                <MdSchedule />
+            <div className="flex  items-center">
+              <span className="text-gray-400 ">
+                < MdSchedule className="mt-1 mx-1 h-10 w-7" />
               </span>
-              <p>{daySelected.format("dddd, MMMM DD")}</p>
+              <p >{daySelected.format("dddd, MMMM DD")}</p>
             </div>
-            <div className="flex">
+            <div className="flex justify-center items-center">
               <span className="text-gray-400">
-                <MdSegment />
+                <MdSegment className="mt-1 mx-1 h-10 w-7"  />
               </span>
               <input
                 type="text"
@@ -100,9 +98,9 @@ const EventModal = () => {
                 onChange={(e) => setDescription(e.target.value)}
               />
             </div>
-            <div className="flex">
+            <div className="flex  items-center">
               <span className="text-gray-400">
-                <BsBookmarkCheck />
+                <BsBookmarkCheck  className="mt-1 mx-1 h-10 w-7"/>
               </span>
               <div className="flex gap-x-2">
                 {labelsClasses.map((lblClass, i) => (

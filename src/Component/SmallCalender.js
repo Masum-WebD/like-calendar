@@ -40,7 +40,7 @@ const SmallCalender = () => {
   }
   return (
     <div className="mt-9">
-      <header className="flex justify-between">
+      <header className="flex justify-between items-center">
         <p className="text-gray-600 font-bold">
           {dayjs(new Date(dayjs().year(), currentMonthIdx)).format("MMMM YYYY")}
         </p>
@@ -48,13 +48,13 @@ const SmallCalender = () => {
           onClick={handlePrevMonth}
           className=" cursor-pointer text-gray-600 mx-2 font-bold h-10  "
         >
-          <FiChevronLeft />
+          <FiChevronLeft className="h-6 w-5" />
         </button>
         <button
           onClick={handleNextMonth}
           className=" cursor-pointer text-gray-600 h-10 font-bold mx-2  "
         >
-          <FiChevronRight />
+          <FiChevronRight className="h-6 w-5" />
         </button>
       </header>
       <div className="grid grid-cols-7 grid-rows-6">
@@ -85,3 +85,5 @@ const SmallCalender = () => {
 };
 
 export default SmallCalender;
+
+
